@@ -1,3 +1,6 @@
+./.gnupg
+/usr/local/bin/gpg2
+GPG_AGENT_INFO=/tmp/gpg-eip3ku/S.gpg-agent:69807:1
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: GnuPG v2
 
@@ -25,6 +28,17 @@ R4gizueC+GnaExoIWQGJumzVWwG/rct/pXZVTr3aHu5yzOd7CR0vH9TH+q+1VViX
 O7Yqm1wCOHzacnbrh9GSrqiLZE0eMK/Rm6faOG++hRhk3Wd4EzRuoliXvPgQcv9W
 7qRH+F5/JeFQIbogTh09qkuNryTDqerSLtrbpw4w16BqvOuBx1VS5RdnHIbmiKnn
 gL/TYuHmHyfz+t/nuMd25I3X4kbI5siHwIjQEz+NBQxQjwUavVTne2nRGMYBDqqI
-7JkwvWtKb0jWCgvW3RwPxmqbPxS9Zdaa2g==
-=ED1v
+7JkwvWtKb0jWCgvW3RwPxmqbPxS9Zdaa2okCHAQQAQgABgUCV+BvGwAKCRBGVJBL
+tIS2skDvEACPEHi4OhjnxF515QlvLV/qn8yukOTX3qgAyzh2hmSpYqv+rROOSYeb
+BEg1Sf52cL3XNve3S3sjGLoXf6XtEkUkQz3l4MymU22nxd1+xR+MgnwOx7XX+HRP
+veVE5HeTbL1Q4IbBeD1IWcVo6HhIK6uzQC0zhwP1EX4z7A3RhfnhHenTrl395gxh
+5S62J3nyNBfk/U8D+0UqCUCazMdMBwHdUh3oNWEH2tQhRJSj4OE6RqYMWWm+6cWu
+Z3SJCgQv76UUNrvzytd3wluP/gLjt9rfZ55Rr5x7iufab4B1BACuFv/3f0SPwhy9
+avxgZTBu4Lvqgbxs5Kp4yqqYrtyWvpzOYkDoCEdlCbIBeX43+rfGB8S+X3FbFAq5
+FxrAMRr3Ln1XCtV2KyqVpIrmA2UKagCetkXEOX2QTLCnAQrT5kIrj3gwTzt29nFL
+U1LU+OlEVyeFO2OMieQgDkIvr+jAzNa9Vbspg9GiQstL3lLUYwz49ks1kFHMrEh5
+Ttu9xzzugN4qR9MksIQ2Q214Fjky83JvB7u3dyEkry50jAVTN8vO9qd0cZDY10sg
+zHET2Zu5vUczRnnyfqdWzEq1KCsTDXweog9kxfMld7ffAWV4apuDfMwcPzO3/4eH
+qpkWgt+GDifgoLkeZGt7fOeifjqL0kHL5BIXqiIAbzpvUqO+LwoKSw==
+=k8ia
 -----END PGP PUBLIC KEY BLOCK-----
