@@ -10,6 +10,8 @@ import re
 import subprocess
 import sys
 
+# This dict will need to be updated to allow for more committers.
+# If you update this dict, you also need to update the whitelist in puppet.
 VALID_KEY_IDS = {
     "FC829B7FFAA9AC38": "asasaki@mozilla.com",
 }
@@ -28,7 +30,6 @@ def main(name=None):
     output = subprocess.check_output(
         ["git", "log", "--no-merges", "--format='%H:%GG'"]
     ).decode('utf-8')
-    message = "Unknown exception"
     lines = output.splitlines()
     keyid = None
     line = lines[0]
@@ -37,8 +38,10 @@ def main(name=None):
     sha = parts[0]
     if parts[1] == 'gpg':
         for line in lines:
-            line.replace("'", "")
+            line = line.replace("'", "")
             log.debug(line)
+            if not line.startswith(sha) and not line.startswith("gpg:"):
+                break
             m = REGEX.search(line)
             if m:
                 keyid = m.groupdict()['keyid']
