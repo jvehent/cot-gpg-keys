@@ -1,0 +1,10 @@
+language: python
+python:
+  - 3.5.2
+
+env:
+    - VERBOSE=1
+install:
+    - cp gpg.conf ~/.gnupg/
+script:
+    - python check_commit_signatures.py
