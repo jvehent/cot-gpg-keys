@@ -13,6 +13,8 @@ import sys
 VALID_KEY_IDS = {
     "FC829B7FFAA9AC38": "asasaki@mozilla.com",
     "D97ADC2D0CE27096": "garndt@mozilla.com",
+    "AD7CB99F8248BA0F": "jlund@mozilla.com",
+    "22317A4747EA2832": "mtabara@mozilla.com",
 }
 REGEX = re.compile(' using [A-Z]+ key( ID)? (0x)?(?P<keyid>[A-F0-9]*)$')
 log = logging.getLogger(__name__)
