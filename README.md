@@ -38,14 +38,16 @@ To tag,
 # First make sure all changes since the last tag are legit!
 PREVIOUS_TAG=`git describe --abbrev=0`
 # check the signature of the previous tag
-git tag -v $PREVIOUS_TAG
+git tag -v "$PREVIOUS_TAG"
 # check the commit logs between the previous tag and HEAD
-git log `git describe --abbrev=0`..HEAD
+git log "$PREVIOUS_TAG"..HEAD
 # check the diff between the previous tag and HEAD
-git diff `git describe --abbrev=0`
+git diff "$PREVIOUS_TAG"
 # if that all looks good, tag
 DATE=`date +%Y%M%d%H%m%S`
-git tag -s -m "production-$DATE" production-$DATE [REVISION]
+git tag -s -m "production-$DATE" production-$DATE
+git push --tags
+# you also need to `git push --tags` to the upstream repo
 ```
 
 We no longer need to sign commits.
