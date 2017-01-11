@@ -35,6 +35,15 @@ In your `~/.gitconfig`:
 To tag,
 
 ```bash
+# First make sure all changes since the last tag are legit!
+PREVIOUS_TAG=`git describe --abbrev=0`
+# check the signature of the previous tag
+git tag -v $PREVIOUS_TAG
+# check the commit logs between the previous tag and HEAD
+git log `git describe --abbrev=0`..HEAD
+# check the diff between the previous tag and HEAD
+git diff `git describe --abbrev=0`
+# if that all looks good, tag
 DATE=`date +%Y%M%d%H%m%S`
 git tag -s -m "production-$DATE" production-$DATE [REVISION]
 ```
