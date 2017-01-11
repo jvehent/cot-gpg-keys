@@ -44,7 +44,7 @@ git log "$PREVIOUS_TAG"..HEAD
 # check the diff between the previous tag and HEAD
 git diff "$PREVIOUS_TAG"
 # if that all looks good, tag
-DATE=`date +%Y%M%d%H%m%S`
+DATE=`date +%Y%m%d%H%M%S`
 git tag -s -m "production-$DATE" production-$DATE
 git push --tags
 # you also need to `git push --tags` to the upstream repo
