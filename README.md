@@ -36,6 +36,7 @@ To tag,
 
 ```bash
 # First make sure all changes since the last tag are legit!
+git pull --ff-only --tags
 PREVIOUS_TAG=`git describe --abbrev=0`
 # check the signature of the previous tag
 git tag -v "$PREVIOUS_TAG"
@@ -48,6 +49,7 @@ DATE=`date +%Y%m%d%H%M%S`
 git tag -s -m "production-$DATE" production-$DATE
 git push --tags
 # you also need to `git push --tags` to the upstream repo
+git push git@github.com:mozilla-releng/cot-gpg-keys.git --tags
 ```
 
 We no longer need to sign commits.
