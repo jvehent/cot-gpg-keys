@@ -1,10 +1,7 @@
-Pubkeys for generic-worker GPG keys go here.
+Public GPG keys for generic-worker go here.
 
-We want to prune old keys as soon as they're no longer in use, so put them in subdirectories.
+To create new keys for Windows worker types:
 
-Example subdirectory names:
-
-* win7-20160909/
-* 2016-09-19/
-* 1474327713/
-* ami-group-X/
+- edit generate_keys.sh (to add or remove worker types)
+- run the key generation script
+- commit and push the new public keys
