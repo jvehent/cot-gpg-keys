@@ -1,10 +1,21 @@
-Pubkeys for generic-worker GPG keys go here.
+Public GPG keys for generic-worker go here.
 
-We want to prune old keys as soon as they're no longer in use, so put them in subdirectories.
+To create new keys for Windows worker types:
 
-Example subdirectory names:
-
-* win7-20160909/
-* 2016-09-19/
-* 1474327713/
-* ami-group-X/
+- edit generate_keys.sh (to add or remove worker types)
+- run the key generation script
+- create or edit secrets at: https://tools.taskcluster.net/secrets/.
+  for each worker type with a new key:
+  - export the private key with a command like:
+    ```bash
+    gpg2 --no-default-keyring --keyring gecko-b-win.gpg --armor --export-secret-key noreply-<worker type>@mozilla.com
+    ```
+  - create or edit the secret named: ```repo:github.com/mozilla-releng/OpenCloudConfig:cot-<worker type>```.
+  - the contents of the secret should be in json format as below (replace newlines with "\n"):
+  
+    ```json
+    {
+      "cot_private_key": "-----BEGIN PGP PRIVATE KEY BLOCK-----\nVersion: GnuPG v2\n\nsecret removed\n-----END PGP PRIVATE KEY BLOCK-----"
+    }
+    ```
+- commit and push new public keys to this repo
