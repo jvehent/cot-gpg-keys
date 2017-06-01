@@ -45,7 +45,7 @@ git log "$PREVIOUS_TAG"..HEAD
 # check the diff between the previous tag and HEAD
 git diff "$PREVIOUS_TAG"
 # if that all looks good, tag
-DATE=`date +%Y%m%d%H%M%S`
+DATE=`python -c "from __future__ import print_function; import datetime; d=datetime.datetime.utcnow(); print('%04d%02d%02d%02d%02d%02d'%(d.year,d.month,d.day,d.hour,d.minute,d.second))"`
 git tag -s -m "production-$DATE" production-$DATE
 git push --tags
 # you also need to `git push --tags` to the upstream repo
