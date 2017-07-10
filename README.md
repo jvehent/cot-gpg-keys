@@ -28,6 +28,8 @@ At the top level, we have
 
 ## Tagging git commits
 
+You need to have a [trusted gpg key](https://hg.mozilla.org/build/puppet/file/tip/modules/scriptworker/files/git_pubkeys) to perform this step!
+
 In your `~/.gitconfig`:
  - set your `user.signingkey` to your long keyid or fingerprint
  - set your `gpg.program` to the path to gpg.  I recommend the latest gpg 2.0.x.
