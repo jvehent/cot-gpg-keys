@@ -54,6 +54,8 @@ git push --tags
 git push git@github.com:mozilla-releng/cot-gpg-keys.git --tags
 ```
 
+I added a `tag.sh` to do the above, minus the extra `git push`.
+
 We no longer need to sign commits.
 
 ### Backing out changes
