@@ -41,4 +41,6 @@ fi
 echo "$PREFIX Good."
 echo
 git tag -s -m "production-$DATE" production-$DATE
-git push --tags
+echo
+echo "$PREFIX tagged with production-$DATE ."
+echo "$PREFIX now use |git push --tags| to push the tag to the repo."
