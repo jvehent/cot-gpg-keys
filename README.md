@@ -1,3 +1,5 @@
+[![Task Status](https://github.taskcluster.net/v1/repository/mozilla-releng/cot-gpg-keys/master/badge.svg)](https://github.taskcluster.net/v1/repository/mozilla-releng/cot-gpg-keys/master/latest)
+
 # TaskCluster worker GPG key repo
 
 This repo contains GPG pubkeys, used to validate the signature in the Taskcluster worker Chain of Trust artifact.

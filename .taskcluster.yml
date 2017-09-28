@@ -1,0 +1,28 @@
+version: 0
+tasks:
+  - provisionerId: '{{ taskcluster.docker.provisionerId }}'
+    workerType: '{{ taskcluster.docker.workerType }}'
+    extra:
+      github:
+        events:
+          - push
+          - pull_request.opened
+          - pull_request.synchronize
+        branches:
+          - master
+    payload:
+      maxRunTime: 3600
+      image: python
+      command:
+        - /bin/bash
+        - '--login'
+        - '-c'
+        - >-
+          git clone {{event.head.repo.url}} repo && cd repo && git config
+          advice.detachedHead false && git checkout {{event.head.sha}} && pip
+          install tox && tox
+    metadata:
+      name: gpg pubkey expiration
+      description: Check for gpg pubkey expiration dates in the near future
+      owner: '{{ event.head.user.email }}'
+      source: '{{ event.head.repo.url }}'
