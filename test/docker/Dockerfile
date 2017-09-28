@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y \
     gnupg2
 
 RUN mkdir -p /work
-
 RUN pyvenv /work
+RUN /work/bin/pip install tox
 
 WORKDIR /work
