@@ -24,6 +24,7 @@ WARNING_THRESHOLD = 60
 ERROR_THRESHOLD = 30
 PUPPET_URL = "https://hg.mozilla.org/build/puppet/archive/production.zip/modules/scriptworker/files/git_pubkeys/"
 EXPIRE_REGEX = re.compile('expires: (\d{4}-\d{2}-\d{2})')
+GPG = 'gpg2'
 
 
 def find_pubkeys(path):
@@ -58,7 +59,7 @@ def check_expiration(path):
     # run `gpg KEY.pub`, find expiration markers, check against arrow and
     # thresholds
     print(path)
-    output = subprocess.check_output(['gpg', path]).decode('utf-8')
+    output = subprocess.check_output([GPG, path]).decode('utf-8')
     level_config = [
         {'msg': 'Good.'},
         {'msg': 'WARNING: %(path)s expires within %(warning_threshold)d days: %(expiry)s!'},
