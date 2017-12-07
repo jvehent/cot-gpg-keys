@@ -3,7 +3,7 @@
 # add or remove worker types here
 #workertypes=('gecko-1-b-win2012' 'gecko-2-b-win2012' 'gecko-3-b-win2012')
 workertypes=('gecko-3-b-win2012')
-key_validity="3 months"
+key_validity="4 months"
 key_valid_start=$(date --iso-8601 -u)
 key_valid_end=$(date --iso-8601 -u -d "+${key_validity}")
 keyring=${key_valid_start}_${key_valid_end}_gecko-b-win.gpg

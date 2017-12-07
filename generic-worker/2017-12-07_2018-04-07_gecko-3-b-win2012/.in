@@ -1,0 +1,9 @@
+Key-Type: RSA
+Key-Length: 4096
+Subkey-Type: RSA
+Subkey-Length: 4096
+Name-Real: gecko-3-b-win2012
+Name-Email: noreply-gecko-3-b-win2012@mozilla.com
+Expire-Date: 2018-04-07
+%no-protection
+%commit
